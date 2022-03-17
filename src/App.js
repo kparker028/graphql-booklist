@@ -1,9 +1,10 @@
-import BookList from "./components/BookList";
-import ApolloClient from "apollo-boost";
-import { ApolloProvider } from "react-apollo";
+import { BookList } from "./components/BookList";
+import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+import { AddBook } from "./components/AddBook";
 
 const client = new ApolloClient({
 	uri: "http://localhost:4000/graphql",
+	cache: new InMemoryCache(),
 });
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 			<div id='main'>
 				<h1>New Reading List</h1>
 				<BookList />
+				<AddBook />
 			</div>
 		</ApolloProvider>
 	);
