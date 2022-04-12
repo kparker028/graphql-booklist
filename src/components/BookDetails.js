@@ -1,6 +1,7 @@
 import React from "react";
 import { getBookQuery } from "../queries/queries";
 import { useQuery } from "@apollo/client";
+import "./bookDetails.css";
 
 export const BookDetails = ({ bookId }) => {
 	const { loading, data } = useQuery(getBookQuery, {
@@ -28,10 +29,5 @@ export const BookDetails = ({ bookId }) => {
 		}
 	};
 
-	return (
-		<div id='book-details'>
-			<p>Output details here</p>
-			{getDetails()}
-		</div>
-	);
+	return <div id='book-details'>{getDetails()}</div>;
 };

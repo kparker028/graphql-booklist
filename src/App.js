@@ -10,8 +10,12 @@ const client = new ApolloClient({
 function App() {
 	return (
 		<ApolloProvider client={client}>
-			<div id='main'>
-				<h1>New Reading List</h1>
+			<div id='main' style={{ width: "100%" }}>
+				<div
+					style={{ display: "flex", width: "60%", justifyContent: "center" }}
+				>
+					<h1>Reading List With GraphQL</h1>
+				</div>
 				<BookList />
 				<AddBook />
 			</div>

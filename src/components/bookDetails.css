@@ -1,0 +1,29 @@
+#book-details {
+	position: absolute;
+	background-color: #61c3fd;
+	right: 0;
+	top: 0;
+	width: 30%;
+	height: 100%;
+	display: flex;
+	padding: 2rem;
+}
+
+#book-details h2 {
+	font-size: 2rem;
+	color: #fff;
+	text-align: center;
+}
+
+#book-details p {
+	color: #f6f6f6;
+	font-weight: 400;
+	font-size: 1.5rem;
+}
+
+#book-details ul li {
+	list-style: circle;
+	font-size: 1.3rem;
+	color: #fff;
+	padding: 0.2rem 0;
+}

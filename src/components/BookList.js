@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useQuery } from "@apollo/client";
 import { getBooksQuery } from "../queries/queries";
 import { BookDetails } from "./BookDetails";
+import "./bookList.css";
 
 export const BookList = () => {
 	const { loading, data } = useQuery(getBooksQuery);
@@ -12,11 +13,7 @@ export const BookList = () => {
 			return <li>Loading Books...</li>;
 		} else {
 			return data.books.map((book) => (
-				<li
-					key={book.id}
-					onClick={() => setSelected(book.id)}
-					style={{ cursor: "pointer" }}
-				>
+				<li key={book.id} onClick={() => setSelected(book.id)}>
 					{book.name}
 				</li>
 			));

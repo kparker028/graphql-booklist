@@ -5,6 +5,7 @@ import {
 	addBookMutation,
 	getBooksQuery,
 } from "../queries/queries";
+import "./addBook.css";
 
 export const AddBook = () => {
 	const [name, setName] = useState("");
